@@ -11,7 +11,7 @@ def mouseClick(clickTimes,lOrR,img,reTry):
     countTimes = 1
     if reTry == 1:
         while True:
-            location=pyautogui.locateCenterOnScreen(img,confidence=0.9)
+            location=pyautogui.locateCenterOnScreen(img,confidence=0.95)
             if location is not None:
                 pyautogui.click(location.x,location.y,clicks=clickTimes,interval=0.2,duration=0.2,button=lOrR)
                 break
@@ -92,10 +92,10 @@ def dataCheck(sheet1):
                 sheetIndex, times = cmdValue.value.split(',', 1)
                 # 读取对应的操作
                 if sheetIndex is None:
-                    print('第',i+1,"行,第2列数据有毛病")
+                    print('第',i+1,"行,第2列第1条数据有毛病")
                     checkCmd = False                    
                 if times is None:
-                    print('第',i+1,"行,第2列数据有毛病")
+                    print('第',i+1,"行,第2列第2条数据有毛病")
                     checkCmd = False
             else:
                 print('第',i+1,"行,第2列数据有毛病")
@@ -113,9 +113,11 @@ def mainWork(sheet):
         if cmdType.value == 1.0:
             # 取图片名称
             img = sheet.row(i)[1].value
+            description = sheet.row(i)[3].value
             reTry = 1
             if sheet.row(i)[2].ctype == 2 and sheet.row(i)[2].value != 0:
                 reTry = sheet.row(i)[2].value
+            print("内容:",description)
             mouseClick(1,"left",img,reTry)
             print("单击左键",img)
         # 2代表双击左键
@@ -173,11 +175,14 @@ def readAndOperation(sheetIndex, times):
     print('进来了')
     dataCheckResult = dataCheck(sheet)
     if dataCheckResult:
+        print('进来了mainwork')
         mainWork(sheet)
+        print('进来了loopOperation')
         loopOperation(sheetIndex, times)
 
 
 def loopOperation(sheetIndex, times):
+    print('进来循环操作了')
     # 设置文件名
     loopOperationFile = 'loopOperation.xls'
     # 打开文件
