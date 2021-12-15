@@ -4,7 +4,6 @@ import pyautogui
 import pyperclip
 import xlrd
 
-
 # 定义鼠标事件
 # pyautogui库其他用法 https://blog.csdn.net/qingfengxd1/article/details/108270159
 def mouseClick(clickTimes,lOrR,img,reTry):
@@ -100,8 +99,8 @@ def dataCheck(sheet1):
             else:
                 print('第',i+1,"行,第2列数据有毛病")
                 checkCmd = False
-            
         i += 1
+        # print("当前行:", i, "当前文件名:", sheet1) 
     return checkCmd
 
 # 任务
@@ -166,37 +165,45 @@ def mainWork(sheet):
             sheetIndex, times = strList.split(',', 1)
             print('sheet页:', (int(sheetIndex)), ', 执行次数:', int(times))
             readAndOperation(sheetIndex, times)
+        print("第", i ,"次循环")
         i += 1
 
 # 读取操作并且执行
 def readAndOperation(sheetIndex, times):
     # 通过索引获取表格sheet页
     sheet = wb.sheet_by_index((int(sheetIndex)-1))
-    print('进来了')
+    # print('进来了')
     dataCheckResult = dataCheck(sheet)
     if dataCheckResult:
-        print('进来了mainwork')
+        # print('进来了mainwork')
         mainWork(sheet)
-        print('进来了loopOperation')
+        # print('mainWork结束')
         loopOperation(sheetIndex, times)
 
 
 def loopOperation(sheetIndex, times):
-    print('进来循环操作了')
+    # print('进来循环操作了')
     # 设置文件名
     loopOperationFile = 'loopOperation.xls'
     # 打开文件
     loopOperationWb = xlrd.open_workbook(filename=loopOperationFile)
 
-    # 御魂重复刷 sheetIndex == 1、
-    # 探索重复刷 sheetIndex == 2、
-    # 麒麟觉醒重复刷 sheetIndex == 3:
+    # 御魂重复刷 sheetIndex == 2、
+    # 探索重复刷 sheetIndex == 3、
+    # 麒麟觉醒重复刷 sheetIndex == 4:
     # 通过索引获取表格sheet页
-    loopOperationSheet = loopOperationWb.sheet_by_index((sheetIndex - 1))
+    loopOperationSheet = loopOperationWb.sheet_by_index((int(sheetIndex) - 2))
+
+    names = loopOperationWb.sheet_names()
+    print("sheet名:", names)
     loopOperationCheckResult = dataCheck(loopOperationSheet)
     # 循环执行
     if loopOperationCheckResult:
-        mainWork(loopOperationSheet)
+        timesInt = int(times)
+        i = 0
+        while i < timesInt:
+            mainWork(loopOperationSheet)
+            i += 1
 
 if __name__ == '__main__':
     # 设置文件名
