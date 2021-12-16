@@ -179,7 +179,8 @@ def readAndOperation(sheetIndex, times):
         mainWork(sheet)
         # print('mainWork结束')
         loopOperation(sheetIndex, times)
-
+        # 任务结束返回探索
+        backToMenu(sheetIndex)
 
 def loopOperation(sheetIndex, times):
     # print('进来循环操作了')
@@ -204,6 +205,21 @@ def loopOperation(sheetIndex, times):
         while i < timesInt:
             mainWork(loopOperationSheet)
             i += 1
+
+def backToMenu(sheetIndex):
+    # 设置文件名
+    backToTansuoFile = 'backToTansuo.xls'
+    # 打开文件
+    backToTansuoWb = xlrd.open_workbook(filename=backToTansuoFile)
+
+    # 御魂重复刷返回 sheetIndex == 2、
+    # 探索重复刷 sheetIndex == 3、
+    # 麒麟觉醒重复刷 sheetIndex == 4:
+    # 通过索引获取表格sheet页
+    backToTansuoSheet = backToTansuoWb.sheet_by_index((int(sheetIndex) - 2))
+    backToTansuoCheckResult = dataCheck(backToTansuoSheet)
+    if backToTansuoCheckResult:
+        mainWork(backToTansuoSheet)
 
 if __name__ == '__main__':
     # 设置文件名
