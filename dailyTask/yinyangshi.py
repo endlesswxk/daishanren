@@ -1,5 +1,5 @@
 import time
-from numpy import False_
+from numpy import False_, true_divide
 
 import pyautogui
 import pyperclip
@@ -191,6 +191,7 @@ def readAndOperation(sheetIndex, times):
         # 任务结束返回探索
         backToMenu(otherSheetName)
 
+# 循环部分的操作
 def loopOperation(sheetName, times):
     # print('进来循环操作了')
     # 设置文件名
@@ -200,18 +201,41 @@ def loopOperation(sheetName, times):
 
     names = loopOperationWb.sheet_names()
     print("excel所有sheet名:", names)
-
     # 通过sheet名获取表格sheet页
     loopOperationSheet = loopOperationWb.sheet_by_name(sheetName)
     loopOperationCheckResult = dataCheck(loopOperationSheet)
+    timesInt = int(times)
+    i = 0
     # 循环执行
     if loopOperationCheckResult:
-        timesInt = int(times)
-        i = 0
-        while i < timesInt:
-            mainWork(loopOperationSheet)
-            i += 1
+        if sheetName == '探索':
+            challengeNormal = loopOperationWb.sheet_by_name('挑战普通怪物')
+            challengeBoss = loopOperationWb.sheet_by_name('挑战首领怪物')
+            while i < timesInt:
+                # 移动到怪物中间
+                mainWork(loopOperationSheet)
+                isNormal = True
+                while isNormal:
+                    # 挑战普通怪物
+                    mainWork(challengeNormal)
+                    location=pyautogui.locateCenterOnScreen('kun28_tiaozhanguaiwushouling.png',confidence=0.95)
+                    if location is not None:
+                        # 挑战首领
+                        mainWork(challengeBoss)
+                        k = 0
+                        while k < 3:
+                            zhanlipin_location=pyautogui.locateCenterOnScreen('tansuo_zhanlipin.png',confidence=0.95)
+                            if zhanlipin_location is not None:
+                                pyautogui.click(zhanlipin_location.x,zhanlipin_location.y,clicks=1,interval=0.2,duration=0.2,button="left")
+                            k += 1
+                        isNormal = False
+                i += 1
+        else:
+            while i < timesInt:
+                mainWork(loopOperationSheet)
+                i += 1
 
+# 操作完返回主界面
 def backToMenu(sheetName):
     # 设置文件名
     backToTansuoFile = 'backToTansuo.xls'
@@ -224,6 +248,7 @@ def backToMenu(sheetName):
     if backToTansuoCheckResult:
         mainWork(backToTansuoSheet)
 
+# 根据任务类型进行任务分类
 def taskRecognition(key):
     # 设置文件名
     file = 'cmd.xls'
@@ -238,17 +263,17 @@ def taskRecognition(key):
         if key == 1:
             mainWork(menu)
         else:
-            doTimes=input('请输入执行次数 \n')
+            doTimes=input('请输入执行次数: \n')
             doTimes=int(doTimes)
             otherSheetName = otherExcelSheetName[taskType[key]]
-            # print('进来了mainwork')
+            # 此处执行循环任务前的准备操作
             mainWork(menu)
-            # print('mainWork结束')
+            # 循环操作
             loopOperation(otherSheetName, doTimes)
             # 任务结束返回探索
             backToMenu(otherSheetName)
 
-
+# 主程序
 if __name__ == '__main__':
     while True:
         key=input('选择功能: 1.日常任务 2.御魂 3.探索 4.麒麟 \n')
