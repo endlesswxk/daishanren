@@ -1,8 +1,13 @@
 import time
+from numpy import False_
 
 import pyautogui
 import pyperclip
 import xlrd
+
+# 全局变量
+taskType = {1: '日常', 2: '刷御魂准备与第一次', 3: '刷探索准备与第一次', 4: '刷麒麟准备与第一次'}
+otherExcelSheetName = {'刷御魂准备与第一次': '御魂', '刷探索准备与第一次': '探索', '刷麒麟准备与第一次': '麒麟'}
 
 # 定义鼠标事件
 # pyautogui库其他用法 https://blog.csdn.net/qingfengxd1/article/details/108270159
@@ -100,7 +105,6 @@ def dataCheck(sheet1):
                 print('第',i+1,"行,第2列数据有毛病")
                 checkCmd = False
         i += 1
-        # print("当前行:", i, "当前文件名:", sheet1) 
     return checkCmd
 
 # 任务
@@ -164,39 +168,41 @@ def mainWork(sheet):
             strList = sheet.row(i)[1].value
             sheetIndex, times = strList.split(',', 1)
             print('sheet页:', (int(sheetIndex)), ', 执行次数:', int(times))
-            readAndOperation(sheetIndex, times)
-        print("第", i ,"次循环")
+            readAndOperation((int(sheetIndex)-1), int(times))
         i += 1
 
 # 读取操作并且执行
 def readAndOperation(sheetIndex, times):
-    # 通过索引获取表格sheet页
-    sheet = wb.sheet_by_index((int(sheetIndex)-1))
+        # 设置文件名
+    file = 'cmd.xls'
+    # 打开文件
+    wb = xlrd.open_workbook(filename=file)
+    # 通过索引获取表格sheet名
+    # 通过sheet名获取表格sheet页
+    sheet = wb.sheet_by_name(taskType[sheetIndex])
+    otherSheetName = otherExcelSheetName[taskType[sheetIndex]]
     # print('进来了')
     dataCheckResult = dataCheck(sheet)
     if dataCheckResult:
         # print('进来了mainwork')
         mainWork(sheet)
         # print('mainWork结束')
-        loopOperation(sheetIndex, times)
+        loopOperation(otherSheetName, times)
         # 任务结束返回探索
-        backToMenu(sheetIndex)
+        backToMenu(otherSheetName)
 
-def loopOperation(sheetIndex, times):
+def loopOperation(sheetName, times):
     # print('进来循环操作了')
     # 设置文件名
     loopOperationFile = 'loopOperation.xls'
     # 打开文件
     loopOperationWb = xlrd.open_workbook(filename=loopOperationFile)
 
-    # 御魂重复刷 sheetIndex == 2、
-    # 探索重复刷 sheetIndex == 3、
-    # 麒麟觉醒重复刷 sheetIndex == 4:
-    # 通过索引获取表格sheet页
-    loopOperationSheet = loopOperationWb.sheet_by_index((int(sheetIndex) - 2))
-
     names = loopOperationWb.sheet_names()
-    print("sheet名:", names)
+    print("excel所有sheet名:", names)
+
+    # 通过sheet名获取表格sheet页
+    loopOperationSheet = loopOperationWb.sheet_by_name(sheetName)
     loopOperationCheckResult = dataCheck(loopOperationSheet)
     # 循环执行
     if loopOperationCheckResult:
@@ -206,101 +212,50 @@ def loopOperation(sheetIndex, times):
             mainWork(loopOperationSheet)
             i += 1
 
-def backToMenu(sheetIndex):
+def backToMenu(sheetName):
     # 设置文件名
     backToTansuoFile = 'backToTansuo.xls'
     # 打开文件
     backToTansuoWb = xlrd.open_workbook(filename=backToTansuoFile)
 
-    # 御魂重复刷返回 sheetIndex == 2、
-    # 探索重复刷 sheetIndex == 3、
-    # 麒麟觉醒重复刷 sheetIndex == 4:
-    # 通过索引获取表格sheet页
-    backToTansuoSheet = backToTansuoWb.sheet_by_index((int(sheetIndex) - 2))
+    # 通过sheet名获取表格sheet页
+    backToTansuoSheet = backToTansuoWb.sheet_by_name(sheetName)
     backToTansuoCheckResult = dataCheck(backToTansuoSheet)
     if backToTansuoCheckResult:
         mainWork(backToTansuoSheet)
 
-if __name__ == '__main__':
+def taskRecognition(key):
     # 设置文件名
     file = 'cmd.xls'
     # 打开文件
     wb = xlrd.open_workbook(filename=file)
-    checkCmd = False
+    # 通过索引获取表格sheet页
+    menu = wb.sheet_by_name(taskType[key])
+    # 数据检查
+    checkCmd = dataCheck(menu)
+    if checkCmd: 
+        # 刷日常的情况
+        if key == 1:
+            mainWork(menu)
+        else:
+            doTimes=input('请输入执行次数 \n')
+            doTimes=int(doTimes)
+            otherSheetName = otherExcelSheetName[taskType[key]]
+            # print('进来了mainwork')
+            mainWork(menu)
+            # print('mainWork结束')
+            loopOperation(otherSheetName, doTimes)
+            # 任务结束返回探索
+            backToMenu(otherSheetName)
+
+
+if __name__ == '__main__':
     while True:
         key=input('选择功能: 1.日常任务 2.御魂 3.探索 4.麒麟 \n')
         key=int(key)
         if key>4 or key <0:
             print('请重新输入:')
-            checkCmd = False
         else:
-            # 通过索引获取表格sheet页
-            sheet1 = wb.sheet_by_index((key-1))
-            checkCmd = dataCheck(sheet1)
-            if checkCmd:
-                mainWork(sheet1)
-                checkCmd = False
-
-        # # 日常任务
-        # if key=='1':
-        #     #通过索引获取表格sheet页
-        #     sheet1 = wb.sheet_by_index(0)
-        #         #数据检查
-        #     checkCmd = dataCheck(sheet1)
-        # # 御魂
-        # elif key=='2':
-        #     #通过索引获取表格sheet页
-        #     sheet1 = wb.sheet_by_index(1)
-        #         #数据检查
-        #     checkCmd = dataCheck(sheet1)
-        # # 探索
-        # elif key=='3':
-        #     #通过索引获取表格sheet页
-        #     sheet1 = wb.sheet_by_index(2)
-        #         #数据检查
-        #     checkCmd = dataCheck(sheet1)
-        # # 麒麟
-        # elif key=='4':
-        #     #通过索引获取表格sheet页
-        #     sheet1 = wb.sheet_by_index(3)
-        #         #数据检查
-        #     checkCmd = dataCheck(sheet1)
-        # else:
-        #     print('请重新输入:')
-        #     key=input('选择功能: 1.日常任务 2.御魂 3.探索 4.麒麟 \n')
-
-        # if checkCmd:
-        #     mainWork(sheet1)
-        #     checkCmd = False
-
-        
-    # file = 'cmd.xls'
-    # #打开文件
-    # wb = xlrd.open_workbook(filename=file)
-    # #通过索引获取表格sheet页
-    # sheet1 = wb.sheet_by_index(0)
-    # print('欢迎使用本脚本')
-    # #数据检查
-    # checkCmd = dataCheck(sheet1)
-    # if checkCmd:
-    #     key=input('选择功能: 1.日常任务 2.御魂 3.探索 \n')
-    #     if key=='1':
-    #         #循环拿出每一行指令
-    #         mainWork(sheet1)
-    #     elif key=='2':
-    #         while True:
-    #             mainWork(sheet1)
-    #             time.sleep(2)
-    #             print("等待2秒")
-    #     elif key=='3':
-    #         while True:
-    #             mainWork(sheet1)
-    #             time.sleep(2)
-    #             print("等待2秒")    
-    # else:
-    #     print('输入有误或者已经退出!')
-
-    # key=input('选择功能: 1.日常任务 2.御魂 3.探索 \n')
-
+            taskRecognition(key)
 
 
