@@ -168,7 +168,7 @@ def mainWork(sheet):
             strList = sheet.row(i)[1].value
             sheetIndex, times = strList.split(',', 1)
             print('sheet页:', (int(sheetIndex)), ', 执行次数:', int(times))
-            readAndOperation((int(sheetIndex)-1), int(times))
+            readAndOperation((int(sheetIndex)), int(times))
         i += 1
 
 # 读取操作并且执行
