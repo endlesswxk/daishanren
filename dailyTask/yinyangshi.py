@@ -6,8 +6,8 @@ import pyperclip
 import xlrd
 
 # 全局变量
-taskType = {1: '日常', 2: '刷御魂准备与第一次', 3: '刷探索准备与第一次', 4: '刷麒麟准备与第一次'}
-otherExcelSheetName = {'刷御魂准备与第一次': '御魂', '刷探索准备与第一次': '探索', '刷麒麟准备与第一次': '麒麟'}
+taskType = {1: '日常', 2: '刷御魂准备与第一次', 3: '刷探索准备与第一次', 4: '刷麒麟准备与第一次', 5: '刷御灵准备与第一次'}
+otherExcelSheetName = {'刷御魂准备与第一次': '御魂', '刷探索准备与第一次': '探索', '刷麒麟准备与第一次': '麒麟', '刷御灵准备与第一次': '御灵'}
 
 # 定义鼠标事件
 # pyautogui库其他用法 https://blog.csdn.net/qingfengxd1/article/details/108270159
@@ -276,9 +276,9 @@ def taskRecognition(key):
 # 主程序
 if __name__ == '__main__':
     while True:
-        key=input('选择功能: 1.日常任务 2.御魂 3.探索 4.麒麟 \n')
+        key=input('选择功能: 1.日常任务 2.御魂 3.探索 4.麒麟 5.御灵\n')
         key=int(key)
-        if key>4 or key <0:
+        if key>5 or key <0:
             print('请重新输入:')
         else:
             taskRecognition(key)
