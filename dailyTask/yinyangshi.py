@@ -1,5 +1,4 @@
 import time
-from numpy import False_, true_divide
 
 import pyautogui
 import pyperclip
