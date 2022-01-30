@@ -1,20 +1,22 @@
 import xlrd
 from dataCheck import dataCheck
+from operateByExcel import operaterBySheet
 
 if __name__ == '__main__':
     # 设置文件名
-    file = 'dailyTaskV2/cmd.xls'
+    file = 'cmd.xls'
     # 打开文件
     wb = xlrd.open_workbook(filename=file)
     # 从文件中读取所有的配置 固定读取第一个sheet
-    sheet1 = wb.sheet_by_index(0)
+    mainSheet = wb.sheet_by_index(0)
     # 对cmd.xls 的数据进行检查, 数据正常则进行操作
-    checkCmd = dataCheck(sheet1)
+    checkCmd = dataCheck(mainSheet)
 
-    # sheet 内容例如： 1.日常 2.御魂 3.探索 4.麒麟 5.活动
+    # sheet 内容例如： 1.日常 2.御魂 3.探索 4.麒麟 5.活动 6.御灵
+    # 所有的操作都配置在excel中， 即使有新的操作 也无需调整代码
     if checkCmd:
         while True:
-            mainWork(sheet1)
+            operaterBySheet(mainSheet)
 
 
 

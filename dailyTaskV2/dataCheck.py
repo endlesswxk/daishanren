@@ -24,7 +24,7 @@ def dataCheck(targetSheet):
         # 第2列 内容检查
         cmdValue = targetSheet.row(i)[1]
         # 读图点击类型指令，内容必须为字符串类型
-        if cmdType.value ==1.0 or cmdType.value == 2.0 or cmdType.value == 3.0:
+        if cmdType.value ==1.0 or cmdType.value == 2.0 or cmdType.value == 3.0 or cmdType.value == 7.0 or cmdType.value == 8.0:
             if cmdValue.ctype != 1:
                 print('第',i+1,"行,第2列数据有毛病")
                 checkCmd = False
@@ -43,24 +43,23 @@ def dataCheck(targetSheet):
             if cmdValue.ctype != 2:
                 print('第',i+1,"行,第2列数据有毛病")
                 checkCmd = False
-        # 读取数据，内容必须是str，自带默认值
+        # 读取数据事件，内容必须为数字
         if cmdType.value == 7.0:
-            if cmdValue.ctype != 1:
-                print('第',i+1,"行,第2列数据有毛病")
+            col4thData = targetSheet.row(i)[3]
+            if col4thData.ctype != 2:
+                print('第',i+1,"行,第4列数据有毛病")
                 checkCmd = False
-            if cmdValue is not None:
-                print(cmdValue.value)
-                sheetIndex, times = cmdValue.value.split(',', 1)
-                # 读取对应的操作
-                if sheetIndex is None:
-                    print('第',i+1,"行,第2列数据有毛病")
-                    checkCmd = False                    
-                if times is None:
-                    print('第',i+1,"行,第2列数据有毛病")
-                    checkCmd = False
-            else:
-                print('第',i+1,"行,第2列数据有毛病")
+        # 读取数据事件，内容必须为数字
+        if cmdType.value == 8.0:
+            col4thData = targetSheet.row(i)[3]
+            if col4thData.ctype != 2:
+                print('第',i+1,"行,第4列数据有毛病")
                 checkCmd = False
-            
+        # 读取数据事件，内容必须为数字
+        if cmdType.value == 9.0:
+            col4thData = targetSheet.row(i)[3]
+            if col4thData.ctype != 2:
+                print('第',i+1,"行,第4列数据有毛病")
+                checkCmd = False
         i += 1
     return checkCmd
