@@ -14,22 +14,23 @@ spiderLog = SpiderLog()
 
 # 获取接下来的操作
 def getOperationsByExcelNameAndSheetName(excelName, sheetName):
-    spiderLog.info("进入 getOperationsByExcelNameAndSheetName 方法")
     # 设置文件名
     filePath = getExcelPath() + excelName
+    spiderLog.info("获取Excel: " + filePath)
     # 打开文件
     wbs = xlrd.open_workbook(filename=filePath)
     # 从文件中读取所有的配置 根据sheetName 读取指定sheet
+    spiderLog.info("获取sheet: " + sheetName)
     targetSheet = wbs.sheet_by_name(sheetName)
 
     # 对 targetSheet 的数据进行检查, 数据正常则进行操作
     checkResult = dataCheck(targetSheet)
+    spiderLog.info("数据检查完成!")
 
     # print(checkResult)
     if checkResult:
         subtaskLists = []
         getSubOperations(subtaskLists, targetSheet)
-        spiderLog.info("退出 getOperationsByExcelNameAndSheetName 方法")
         return subtaskLists
     else:
         spiderLog.error(excelName + excelName +
@@ -38,23 +39,23 @@ def getOperationsByExcelNameAndSheetName(excelName, sheetName):
 
 # 获取 excel 主菜单
 def getSubMenuSheetByExcelNameAndSheetName(excelName, sheetName):
-    spiderLog.info("进入 getSubMenuSheetByExcelNameAndSheetName 方法")
-
     # 设置文件名
     filePath = getExcelPath() + excelName
+    spiderLog.info("获取Excel: " + filePath)
     # 打开文件
     wbs = xlrd.open_workbook(filename=filePath)
-    # 从文件中读取所有的配置 固定读取第一个sheet
+    # 从文件中读取所有的配置 根据sheetName 读取指定sheet
     targetSheet = wbs.sheet_by_name(sheetName)
+    spiderLog.info("获取sheet: " + sheetName)
 
     # 对 targetSheet 的数据进行检查, 数据正常则进行操作
     checkResult = cmdExcelDataCheck(targetSheet, filePath)
+    spiderLog.info("数据检查完成!")
 
     # print(checkResult)
     if checkResult:
         subtaskLists = []
         getMainOperations(subtaskLists, targetSheet)
-        spiderLog.info("退出 getSubMenuSheetByExcelNameAndSheetName 方法")
         return subtaskLists
     else:
         spiderLog.error(excelName + excelName +
@@ -62,11 +63,9 @@ def getSubMenuSheetByExcelNameAndSheetName(excelName, sheetName):
 
 
 def doSubOperation(subAction):
-    spiderLog.info("进入 doSubOperation 方法")
     # 取本行指令的操作类型
     cmdType = subAction.cmdType
     if cmdType == 1.0:
-        spiderLog.info("进入 单击左键 方法")
         # 取图片名称
         img = getImgPath() + subAction.content
         reTry = 1
@@ -113,12 +112,9 @@ def doSubOperation(subAction):
         scroll = subAction.content
         pyautogui.scroll(int(scroll))
         spiderLog.info("滚轮滑动" + str(scroll) + "距离")
-    spiderLog.info("退出 doSubOperation 方法")
 
 
 def doOperations(subtaskLists):
-    spiderLog.info("进入 doOperations 方法")
-
     i = 0
     while i < len(subtaskLists):
         if isinstance(subtaskLists[i], Task):
@@ -142,21 +138,19 @@ def doOperations(subtaskLists):
             doSubOperation(subOperation)
         i += 1
 
-    spiderLog.info("退出 doOperations 方法")
-
 
 # 定义鼠标事件
 # pyautogui库其他用法 https://blog.csdn.net/qingfengxd1/article/details/108270159
 def mouseClick(clickTimes, lOrR, img, reTry):
     if reTry == 1:
         while True:
-            spiderLog.info("进入 单击左键" + img)
+            spiderLog.info("点击图片： " + img)
             location = pyautogui.locateCenterOnScreen(img, confidence=0.95)
             if location is not None:
                 pyautogui.click(location.x, location.y, clicks=clickTimes, interval=0.2, duration=0.2, button=lOrR)
                 break
-            spiderLog.info("未找到匹配图片,0.1秒后重试" + img)
-            time.sleep(0.1)
+            spiderLog.info("未找到匹配图片,0.3秒后重试" + img)
+            time.sleep(0.3)
     elif reTry == -1:
         while True:
             location = pyautogui.locateCenterOnScreen(img, confidence=0.9)

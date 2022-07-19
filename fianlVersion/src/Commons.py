@@ -13,7 +13,6 @@ def getImgPath():
 
 
 def getMainOperations(taskList, tarSheet):
-    spiderLog.info("进入 getMainOperations 方法")
     i = 1
     while i < tarSheet.nrows:
         # TODO: 思考增加列的时候应该怎么优化
@@ -30,11 +29,8 @@ def getMainOperations(taskList, tarSheet):
                 tarSheet.row(i)[6].value))
         i += 1
 
-    spiderLog.info("退出 getMainOperations 方法")
-
 
 def getSubOperations(taskList, tarSheet):
-    spiderLog.info("进入 getSubOperations 方法")
     i = 1
     while i < tarSheet.nrows:
         # TODO: 思考增加列的时候应该怎么优化
@@ -49,5 +45,3 @@ def getSubOperations(taskList, tarSheet):
                 tarSheet.row(i)[4].value,
                 tarSheet.row(i)[5].value))
         i += 1
-
-    spiderLog.info("退出 getSubOperations 方法")

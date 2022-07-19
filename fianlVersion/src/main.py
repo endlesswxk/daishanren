@@ -13,7 +13,6 @@ spiderLog = SpiderLog()
 
 # 主要功能部分
 def chooseToDo(desc, task):
-    spiderLog.info("进入 chooseToDo 方法")
 
     taskDesc = '选择功能: ' + desc + '\n'
     key = int(input(taskDesc))
@@ -26,15 +25,19 @@ def chooseToDo(desc, task):
         # 设置文件名
         filePath = getExcelPath() + fileName
         # 打开文件
+        spiderLog.info("打开excel: " + filePath)
         wbs = xlrd.open_workbook(filename=filePath)
         # 从文件中读取所有的配置 固定读取第一个sheet
+        spiderLog.info("读取sheet: " + sheetName)
         targetSheet = wbs.sheet_by_name(sheetName)
 
         # 对 targetSheet 的数据进行检查, 数据正常则进行操作
+        spiderLog.info("对sheet: " + sheetName + " 进行数据检查")
         checkResult = cmdExcelDataCheck(targetSheet, fileName)
 
         subtaskLists = []
         getMainOperations(subtaskLists, targetSheet)
+        spiderLog.info("取得操作流程! ")
 
         # sheet 内容例如： 主sheet 主要包含需要读取的sheet 名 以及excel名
         # 所有的操作都配置在excel中， 即使有新的操作 也无需调整代码
@@ -43,12 +46,8 @@ def chooseToDo(desc, task):
         else:
             spiderLog.error("cmdExcelDataCheck方法 数据检验有误！")
 
-    spiderLog.info("退出 chooseToDo 方法")
-
 
 if __name__ == '__main__':
-
-    spiderLog.info("进入 main 方法")
 
     # 设置文件名
     file = 'cmd.xls'
