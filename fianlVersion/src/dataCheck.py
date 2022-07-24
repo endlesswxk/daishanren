@@ -51,10 +51,10 @@ def dataCheck(targetSheet):
             if cmdValue.ctype != 2:
                 spiderLog.error(' 第' + str(i + 1) + "行,第2列数据有毛病")
                 checkCmd = False
-        # 读取数据事件，内容必须为数字
+        # 读取数据事件，内容必须为字符串
         if cmdType.value == 7.0:
             col4thData = targetSheet.row(i)[3]
-            if col4thData.ctype != 2:
+            if col4thData.ctype != 1:
                 spiderLog.error(' 第' + str(i + 1) + "行,第4列数据有毛病")
                 checkCmd = False
 
@@ -72,7 +72,6 @@ def dataCheck(targetSheet):
 
 # 主目录 menu sheet数据检查
 def cmdExcelDataCheck(targetSheet, fileName):
-
     checkCmd = True
     # 行数检查
     if targetSheet.nrows < 2:
@@ -143,5 +142,61 @@ def cmdExcelDataCheck(targetSheet, fileName):
                 if repeatTimes.value < 0:
                     checkCmd = False
                     spiderLog.error(fileName + '第' + str(i + 1) + "行,第8列数据有毛病, 数值范围不正确")
+        i += 1
+    return checkCmd
+
+
+# 定时抢占结界卡数据检查
+def autoBootDataCheck(targetSheet, fileName):
+    checkCmd = True
+    # 行数检查
+    if targetSheet.nrows < 2:
+        spiderLog.error(fileName + " 没有数据")
+        checkCmd = False
+    # 每行数据检查
+    i = 1
+    while i < targetSheet.nrows:
+        # 第一行 第3列 延时时长 数值类型检查
+        config = targetSheet.row(i)[2]
+        if i == 1:
+            if config.ctype != 2:
+                spiderLog.error(fileName + ' 第' + str(i + 1) + "行,第3列数据有毛病,不是数值")
+                checkCmd = False
+            else:
+                if config.value < 0 or config.value > 21599:
+                    spiderLog.error(fileName + ' 第' + str(i + 1) + "行,第3列数据有毛病, 不在规定范围内")
+                    checkCmd = False
+
+        if i == 2:
+            if config.ctype == 1:
+                # 文件校验
+                my_file = Path(config.value)
+                # 指定的文件存在
+                if not my_file.is_file():
+                    checkCmd = False
+                    spiderLog.error(fileName + '第' + str(i + 1) + "行,第3列数据有毛病" + config.value + "不存在")
+            else:
+                spiderLog.error(fileName + ' 第' + str(i + 1) + "行,第3列数据有毛病,不是字符串")
+                checkCmd = False
+
+        # 字符串类型校验
+        if i == 3:
+            if config.ctype == 1:
+                # 文件校验
+                my_file = Path(getExcelPath() + config.value)
+                # 指定的文件存在
+                if not my_file.is_file():
+                    checkCmd = False
+                    spiderLog.error(fileName + '第' + str(i + 1) + "行,第3列数据有毛病" + config.value + "不存在")
+            else:
+                spiderLog.error(fileName + ' 第' + str(i + 1) + "行,第3列数据有毛病,不是字符串")
+                checkCmd = False
+
+        # 字符串类型校验
+        if i == 4:
+            if config.ctype != 1:
+                spiderLog.error(fileName + ' 第' + str(i + 1) + "行,第3列数据有毛病,不是字符串")
+                checkCmd = False
+
         i += 1
     return checkCmd

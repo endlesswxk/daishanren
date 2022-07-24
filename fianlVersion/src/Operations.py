@@ -71,7 +71,7 @@ def doSubOperation(subAction):
         reTry = 1
         if isinstance(subAction.retryTimes, int) and subAction.retryTimes != 0:
             reTry = subAction.retryTimes
-        mouseClick(1, "left", img, reTry)
+        mouseClick(1, "left", img, reTry, subAction)
         spiderLog.info("单击左键" + img)
     # 2代表 双击左键
     elif cmdType == 2.0:
@@ -81,7 +81,7 @@ def doSubOperation(subAction):
         reTry = 1
         if isinstance(subAction.retryTimes, int) and subAction.retryTimes != 0:
             reTry = subAction.retryTimes
-        mouseClick(2, "left", img, reTry)
+        mouseClick(2, "left", img, reTry, subAction)
         spiderLog.info("双击左键" + img)
     # 3代表 右键
     elif cmdType == 3.0:
@@ -91,7 +91,7 @@ def doSubOperation(subAction):
         reTry = 1
         if isinstance(subAction.retryTimes, int) and subAction.retryTimes != 0:
             reTry = subAction.retryTimes
-        mouseClick(1, "right", img, reTry)
+        mouseClick(1, "right", img, reTry, subAction)
         spiderLog.info("右键" + img)
         # 4代表 输入
     elif cmdType == 4.0:
@@ -128,10 +128,12 @@ def doOperations(subtaskLists):
                     j += 1
             else:
                 if subTarget.sheetType == 1:
-                    subTargetTaskLists = getSubMenuSheetByExcelNameAndSheetName(subTarget.excelName, subTarget.sheetName)
+                    subTargetTaskLists = getSubMenuSheetByExcelNameAndSheetName(subTarget.excelName,
+                                                                                subTarget.sheetName)
                     doOperations(subTargetTaskLists)
                 else:
-                    subMenuSheetTaskLists = getOperationsByExcelNameAndSheetName(subTarget.excelName, subTarget.sheetName)
+                    subMenuSheetTaskLists = getOperationsByExcelNameAndSheetName(subTarget.excelName,
+                                                                                 subTarget.sheetName)
                     doOperations(subMenuSheetTaskLists)
         else:
             subOperation = subtaskLists[i]
@@ -141,16 +143,25 @@ def doOperations(subtaskLists):
 
 # 定义鼠标事件
 # pyautogui库其他用法 https://blog.csdn.net/qingfengxd1/article/details/108270159
-def mouseClick(clickTimes, lOrR, img, reTry):
+def mouseClick(clickTimes, lOrR, img, reTry, subAction):
     if reTry == 1:
         while True:
-            spiderLog.info("点击图片： " + img)
-            location = pyautogui.locateCenterOnScreen(img, confidence=0.95)
-            if location is not None:
-                pyautogui.click(location.x, location.y, clicks=clickTimes, interval=0.2, duration=0.2, button=lOrR)
+            if subAction.x != '' and subAction.y != '':
+                screenWidth, screenHeight = pyautogui.size()
+                x = int(screenWidth) * subAction.x
+                y = int(screenHeight) * subAction.y
+                spiderLog.info("点击坐标： x:" + x.__str__() + " y:" + y.__str__())
+                pyautogui.moveTo(x, y, duration=2, tween=pyautogui.linear)
+                pyautogui.click(x, y, clicks=clickTimes, interval=0.2, duration=0.2, button=lOrR)
                 break
-            spiderLog.info("未找到匹配图片,0.3秒后重试" + img)
-            time.sleep(0.3)
+            else:
+                spiderLog.info("点击图片： " + img)
+                location = pyautogui.locateCenterOnScreen(img, confidence=0.95)
+                if location is not None:
+                    pyautogui.click(location.x, location.y, clicks=clickTimes, interval=0.2, duration=0.2, button=lOrR)
+                    break
+                spiderLog.info("未找到匹配图片,0.3秒后重试" + img)
+                time.sleep(0.3)
     elif reTry == -1:
         while True:
             location = pyautogui.locateCenterOnScreen(img, confidence=0.9)
