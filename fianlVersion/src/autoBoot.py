@@ -2,14 +2,11 @@ import sys
 
 sys.path.append('../..')
 
-import pyautogui
 import xlrd
 
 from fianlVersion.src.Commons import getExcelPath, getMainOperations
 from fianlVersion.src.Operations import doOperations
 from fianlVersion.src.dataCheck import autoBootDataCheck, cmdExcelDataCheck
-
-
 
 import subprocess
 import time
@@ -24,12 +21,6 @@ def allOperations(param):
     spiderLog.info("allOperations enter")
     # 启动exe
     myPopenObj = subprocess.Popen(param[1])
-    # 等待 8 秒钟
-    time.sleep(15)
-    # 移至并点击屏幕中间
-    screenWidth, screenHeight = pyautogui.size()
-    pyautogui.moveTo(screenWidth / 2, screenHeight / 2, duration=2, tween=pyautogui.linear)
-    pyautogui.click(screenWidth / 2, screenHeight / 2, clicks=1, interval=0.2, duration=0.2, button="left")
 
     # sheet名
     sheetName = param[3]
@@ -56,7 +47,6 @@ def allOperations(param):
         doOperations(subtaskLists)
     else:
         spiderLog.error("cmdExcelDataCheck方法 数据检验有误！")
-
     spiderLog.info("allOperations exit")
 
 
@@ -76,7 +66,7 @@ def intervalTask(param):
     # 采用固定时间间隔（interval）的方式，每隔1小时执行一次
     # 每隔1小时执行一次 scheduler.add_job(job, 'cron', minute=0)
     # 每300秒执行一次   scheduler.add_job(job, 'interval', seconds=300)
-    scheduler.add_job(job, 'interval', args=[param], hours=5, minutes=59)
+    scheduler.add_job(job, 'interval', args=[param], hours=6, minutes=4)
 
     try:
         # 这是一个独立的线程
