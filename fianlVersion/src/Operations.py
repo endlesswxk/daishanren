@@ -121,11 +121,16 @@ def doOperations(subtaskLists):
             subTarget = subtaskLists[i]
             # 该任务是可以重复的
             if subTarget.isRepeat == 1 and subTarget.repeatTimes >= 1:
-                j = 0
-                subMenuSheetTaskLists = getOperationsByExcelNameAndSheetName(subTarget.excelName, subTarget.sheetName)
-                while j < subTarget.repeatTimes:
-                    doOperations(subMenuSheetTaskLists)
-                    j += 1
+                if subTarget.sheetType == 2:
+                    j = 0
+                    subMenuSheetTaskLists = getOperationsByExcelNameAndSheetName(subTarget.excelName, subTarget.sheetName)
+                    while j < subTarget.repeatTimes:
+                        doOperations(subMenuSheetTaskLists)
+                        j += 1
+                elif subTarget.sheetType == 1:
+                    subTargetTaskLists = getSubMenuSheetByExcelNameAndSheetName(subTarget.excelName,
+                                                                                subTarget.sheetName)
+                    doOperations(subTargetTaskLists)
             else:
                 if subTarget.sheetType == 1:
                     subTargetTaskLists = getSubMenuSheetByExcelNameAndSheetName(subTarget.excelName,
@@ -144,10 +149,10 @@ def doOperations(subtaskLists):
 # 定义鼠标事件
 # pyautogui库其他用法 https://blog.csdn.net/qingfengxd1/article/details/108270159
 def mouseClick(clickTimes, lOrR, img, reTry, subAction):
+    screenWidth, screenHeight = pyautogui.size()
     if reTry == 1:
         while True:
             if subAction.x != '' and subAction.y != '':
-                screenWidth, screenHeight = pyautogui.size()
                 x = int(screenWidth) * subAction.x
                 y = int(screenHeight) * subAction.y
                 spiderLog.info("点击坐标： x:" + x.__str__() + " y:" + y.__str__())
