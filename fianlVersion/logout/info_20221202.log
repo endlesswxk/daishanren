@@ -1,0 +1,271 @@
+[2022-12-02 22:30:04] [info] [D:\fork\daishanren\fianlVersion\src\main.py - 63 - <module>] cmd.xls 文件数据检查完成, 进入任务选择!
+[2022-12-02 22:30:32] [info] [D:\fork\daishanren\fianlVersion\src\main.py - 63 - <module>] cmd.xls 文件数据检查完成, 进入任务选择!
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\main.py - 28 - chooseToDo] 打开excel: ../excel/结界突破.xls
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\main.py - 31 - chooseToDo] 读取sheet: 结界突破
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\main.py - 35 - chooseToDo] 对sheet: 结界突破 进行数据检查
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\main.py - 40 - chooseToDo] 取得操作流程! 
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 19 - getOperationsByExcelNameAndSheetName] 获取Excel: ../excel/结界突破.xls
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 23 - getOperationsByExcelNameAndSheetName] 获取sheet: 进行结界突破
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 28 - getOperationsByExcelNameAndSheetName] 数据检查完成!
+[2022-12-02 22:31:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 107 - doSubOperation] 等待1.0秒
+[2022-12-02 22:31:04] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:04] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:09] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:09] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:09] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:09] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:10] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:10] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:10] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:10] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:11] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:11] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:11] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:11] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:12] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:12] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:12] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:12] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:13] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:13] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:13] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:13] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:14] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:14] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:14] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:14] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:15] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:15] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:15] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:15] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:16] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:16] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:16] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:16] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:17] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:17] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:17] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:17] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:18] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:18] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:18] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:18] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:19] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:19] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:19] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:19] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:20] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:20] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:20] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:20] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:21] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:21] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:21] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:21] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:22] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:22] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:22] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:22] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:23] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:23] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:23] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:23] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:24] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:24] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:24] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:24] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:25] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:25] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:25] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:25] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:26] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:26] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:26] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:26] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:27] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:27] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:27] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:27] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:28] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:28] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:28] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:28] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:29] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:29] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:29] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:29] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:30] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:30] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:30] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:30] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:31] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:31] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:31] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:31] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:31] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:32] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:32] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:32] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:33] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:33] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:33] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:33] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:33] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:34] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:34] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:34] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:35] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:35] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:35] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:35] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:35] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:36] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:36] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:36] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:36] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:37] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:37] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:37] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:37] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:38] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:38] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:38] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:38] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:39] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:39] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:39] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:39] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:40] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:40] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:40] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:40] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:41] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:41] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:41] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:41] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:42] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:42] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:42] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:42] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:43] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:43] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:43] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:43] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:44] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:44] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:44] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:44] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:45] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:45] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:45] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:45] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:46] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:46] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:46] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:46] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:47] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:47] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:47] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:47] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:48] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:48] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:48] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:48] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:49] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:49] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:49] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:49] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:50] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:50] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:50] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:50] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:51] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:51] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:51] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:51] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:52] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:52] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:52] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:52] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:53] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:53] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:53] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:53] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:54] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:54] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:54] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:54] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:55] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:55] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:55] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:55] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:56] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:56] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:56] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:56] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:57] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:57] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:57] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:57] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:58] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:58] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:58] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:58] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:59] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:59] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:59] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:31:59] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:00] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:00] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:00] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:00] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:00] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:01] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:01] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:01] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:01] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:02] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:02] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:02] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:02] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:03] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:04] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:04] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:04] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:04] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:05] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:06] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:07] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 168 - mouseClick] 未找到匹配图片,0.3秒后重试../picture/jiejietupo_meiyouxunzhang.png
+[2022-12-02 22:32:08] [info] [D:\fork\daishanren\fianlVersion\src\../..\fianlVersion\src\Operations.py - 163 - mouseClick] 点击图片： ../picture/jiejietupo_meiyouxunzhang.png

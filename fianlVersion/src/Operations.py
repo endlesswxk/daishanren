@@ -3,6 +3,7 @@ import time
 import pyautogui
 import pyperclip
 import xlrd
+import random
 
 from fianlVersion.model.Task import Task
 from fianlVersion.src.Commons import getMainOperations, getExcelPath, getSubOperations, getImgPath
@@ -104,6 +105,8 @@ def doSubOperation(subAction):
     elif cmdType == 5.0:
         # 取图片名称
         waitTime = subAction.content
+        if waitTime == 666:
+            waitTime = random.uniform(0, 0.5)
         spiderLog.info("等待" + str(waitTime) + "秒")
         time.sleep(waitTime)
     # 6代表 滚轮
