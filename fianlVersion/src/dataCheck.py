@@ -200,3 +200,28 @@ def autoBootDataCheck(targetSheet, fileName):
 
         i += 1
     return checkCmd
+
+
+def configValueCheck(targetSheet):
+    checkCmd = True
+    # 行数检查
+    if targetSheet.nrows < 2:
+        print("没数据啊哥")
+        checkCmd = False
+    # 每行数据检查
+    i = 1
+    while i < targetSheet.nrows:
+        # 第2列 操作类型检查
+        configName = targetSheet.row(i)[1]
+        # 第3列 操作类型检查
+        configValue = targetSheet.row(i)[2]
+
+        if configName.ctype != 1 or not configName.value:
+            spiderLog.error("common.xls" + ' 第' + str(i + 1) + "列,第" + str(i + 1) + "行数据有毛病,不是字符串")
+            checkCmd = False
+
+        if configValue.value is None:
+            spiderLog.error("common.xls" + ' 第' + str(i + 2) + "列,第" + str(i + 1) + "行数据有毛病,不是字符串")
+            checkCmd = False
+        i += 1
+    return checkCmd

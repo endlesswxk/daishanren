@@ -91,28 +91,6 @@ def timer(parameters):
     t.start()
     spiderLog.info("timer exit")
 
-
 if __name__ == '__main__':
 
-    # 设置文件名
-    file = 'scheduledTask.xls'
-    # 打开文件
-    wb = xlrd.open_workbook(filename=file)
-    # 从文件中读取所有的配置 固定读取第一个sheet
-    mainSheet = wb.sheet_by_index(0)
-
-    checkCmd = autoBootDataCheck(mainSheet, file)
-
-    if checkCmd:
-        spiderLog.info("scheduledTask.xls 文件数据检查完成, 进入定时任务!")
-        # 定时时间  分变秒
-        delayTime = mainSheet.row(1)[2].value * 60
-        # exe 所在位置
-        daiShanRenEXE = mainSheet.row(2)[2].value
-        # 操作excel 名
-        operationExcel = mainSheet.row(3)[2].value
-        # 操作sheet 名
-        operationSheet = mainSheet.row(4)[2].value
-
-        params = [delayTime, daiShanRenEXE, operationExcel, operationSheet]
         timer(params)
