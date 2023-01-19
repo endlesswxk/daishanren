@@ -1,4 +1,4 @@
-from latestVersion.src.common.Flows import chYuHun
+from latestVersion.src.common.Flows import chYuHun, mainPagePoiReduction, mainPageToTanSuo
 
 
 class Daily:
@@ -11,4 +11,6 @@ class Daily:
         self.U_BOARDER = U_BOARDER
 
     def solo(self):
-        chYuHun(self, "", "")
+        # chYuHun(self, "", "")
+        # mainPagePoiReduction(self)
+        mainPageToTanSuo(self)

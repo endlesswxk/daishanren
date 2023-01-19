@@ -28,7 +28,7 @@ def locate_matchTemplate2(target, want, show=0, msg=0):
     want, treshold, c_name = want[0], want[1], want[2]
     result = cv2.matchTemplate(target, want, cv2.TM_CCOEFF_NORMED)
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-    if max_val > 0.74:
+    if max_val > 0.75:
         return max_loc
     return []
 
@@ -105,3 +105,52 @@ def getOffsetPoi(p, poi):
     e, f = a + c, b + d
     y = [e, f]
     return y
+
+
+# 创建行为
+def getActionsByIndexAndOperations(index, operations):
+    size = len(operations)
+    if size > 1:
+        if index == 0:
+            return [None, getOperation(operations[index]), getOperation(operations[index + 1])]
+        elif index == (size - 1):
+            return [getOperation(operations[index - 1]), getOperation(operations[index]), None]
+        else:
+            return [getOperation(operations[index - 1]), getOperation(operations[index]),
+                    getOperation(operations[index + 1])]
+    elif size == 1:
+        return [None, getOperation(operations[index]), None]
+    else:
+        return []
+
+
+# 创建操作对象
+def getOperation(operation):
+    size = len(operation)
+    if size == 7:
+        return Operation(operation[0], operation[1], operation[2], operation[3], operation[4], operation[5],
+                         operation[6])
+    elif size == 5:
+        return Operation(operation[0], operation[1], operation[2], operation[3], operation[4])
+    else:
+        return Operation(operation[0], operation[1], operation[2], operation[3])
+
+
+
+# 操作对象
+class Operation(object):
+    def __init__(self, pic=None, cmdType=None, poi=None, desc=None, precisely=False, needOffsetClick=False,
+                 offsetClickPoi=None):
+        # 操作类型 1.点击 2.判断存在 3.滑动滚轮
+        self.pic = pic
+        self.cmdType = cmdType
+        # 坐标点击
+        self.poi = poi
+        # 描述
+        self.desc = desc
+        # 是否精确点击
+        self.precisely = precisely
+        # 是否需要 根据图片坐标偏移点击
+        self.needOffsetClick = needOffsetClick
+        # 偏移坐标
+        self.offsetClickPoi = offsetClickPoi

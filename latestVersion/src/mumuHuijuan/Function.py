@@ -5,6 +5,257 @@ import CaptureInactiveWindow
 import CtrInacWindow
 import Featurematcah
 import action
+from latestVersion.src.common.Flows import doCoreOperations
+
+# 主页面位置还原
+mainPagePoiReductionOperations = [
+    # 困28 页面叉掉
+    [['kun28chadiao'], 1, None, '困28 页面叉掉'],
+    # 点击结界突破
+    [['jiejietupoanniu'], 1, None, '点击结界突破'],
+    # 点击式神录
+    [['shishenlu'], 1, None, '点击式神录'],
+    # 点击预设按钮
+    [['shishenlu_yushe'], 1, None, '点击预设按钮'],
+    # 点击地域鬼王预设
+    [['shishenlu_yushe_diyuguiwang'], 1, None, '点击地域鬼王预设'],
+    # 点击默认分组预设
+    [['shishenlu_yushe_morenfenzu'], 1, None, '点击默认分组预设'],
+    # 点击对应阵容的坐标偏移处
+    [['shishenlu_yushe_morenfenzu_jiejietupo'], 1, None, '点击对应阵容的坐标偏移处', True, True, (350, 0)],
+    # 点击预设确定按钮
+    [['shishenlu_yushe_quedinganniu'], 1, None, '点击预设确定按钮'],
+    # 点击式神录返回按钮
+    [['shishenlu_fanhui'], 1, None, '点击式神录返回按钮'],
+
+    # 点击第 1 个结界
+    [['jiejietupo_suijianniu'], 1, (279, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 2 个结界
+    [['jiejietupo_suijianniu'], 1, (553, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 3 个结界
+    [['jiejietupo_suijianniu'], 1, (826, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 1, None, '屏幕点击'],
+    # 点击第 4 个结界
+    [['jiejietupo_suijianniu'], 1, (251, 268), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 5 个结界
+    [['jiejietupo_suijianniu'], 1, (553, 269), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 6 个结界
+    [['jiejietupo_suijianniu'], 1, (849, 271), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 1, None, '屏幕点击'],
+    # 点击第 7 个结界
+    [['jiejietupo_suijianniu'], 1, (258, 390), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 8 个结界
+    [['jiejietupo_suijianniu'], 1, (552, 391), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 9 个结界
+    [['jiejietupo_suijianniu'], 1, (850, 390), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 1, None, '屏幕点击'],
+
+    # 点击第 1 个结界
+    [['jiejietupo_suijianniu'], 1, (279, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 确定退出
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 点击失败
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 2 个结界
+    [['jiejietupo_suijianniu'], 1, (553, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 确定退出
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 点击失败
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 3 个结界
+    [['jiejietupo_suijianniu'], 1, (826, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 确定退出
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 点击失败
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 4 个结界
+    [['jiejietupo_suijianniu'], 1, (251, 268), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 点击失败
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 确定退出
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 5 个结界
+    [['jiejietupo_suijianniu'], 1, (553, 269), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 点击失败
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 确定退出
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 6 个结界
+    [['jiejietupo_suijianniu'], 1, (849, 271), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 点击失败
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 确定退出
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 7 个结界
+    [['jiejietupo_suijianniu'], 1, (258, 390), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 确定退出
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 点击失败
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+    # 点击第 8 个结界
+    [['jiejietupo_suijianniu'], 1, (552, 391), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击退出按钮
+    [['jiejietupo_tuichuanniu'], 1, None, '点击退出按钮'],
+    # 确定退出
+    [['jiejietupo_querentuichuanniu'], 1, None, '确定退出'],
+    # 点击失败
+    [['jiejietupo_shibaituichuanniu'], 1, None, '确定退出'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 2, None, '屏幕点击'],
+
+    # 屏幕点击刷新按钮
+    [['jiejietupo_shuaxinanniu'], 1, None, '屏幕点击'],
+    # 屏幕点击确定按钮
+    [['jiejietupo_quedingshuaxinanniu'], 1, None, '屏幕点击'],
+
+    # 点击第 1 个结界
+    [['jiejietupo_suijianniu'], 1, (279, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 2 个结界
+    [['jiejietupo_suijianniu'], 1, (553, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 3 个结界
+    [['jiejietupo_suijianniu'], 1, (826, 151), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 1, None, '屏幕点击'],
+    # 点击第 4 个结界
+    [['jiejietupo_suijianniu'], 1, (251, 268), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 5 个结界
+    [['jiejietupo_suijianniu'], 1, (553, 269), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 6 个结界
+    [['jiejietupo_suijianniu'], 1, (849, 271), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 1, None, '屏幕点击'],
+    # 点击第 7 个结界
+    [['jiejietupo_suijianniu'], 1, (258, 390), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 8 个结界
+    [['jiejietupo_suijianniu'], 1, (552, 391), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 点击第 9 个结界
+    [['jiejietupo_suijianniu'], 1, (850, 390), '点击地域鬼王预设', True],
+    # 点击结界突破进攻按钮
+    [['jiejietupo_jingonganniu'], 1, None, '点击结界突破进攻按钮'],
+    # 点击奖励, 胜利图片
+    [['shengli', 'jiangli'], 1, None, '点击奖励, 胜利图片'],
+    # 屏幕点击
+    [['jiejietupo_suijianniu'], 1, None, '屏幕点击'],
+    # 关闭结界突破
+    [['jiejietupo_guanbianniu'], 1, None, '屏幕点击'],
+    # 困28
+    [['kun28_hengban'], 1, None, '屏幕点击'],
+]
 
 
 class Daily:
@@ -91,7 +342,6 @@ class Daily:
         posi_1.append(poiX)
         posi_1.append(poiY)
         print('图片坐标：', posi_1[0], posi_1[1])
-        print('点击坐标：', posi_1[0], posi_1[1])
         CtrInacWindow.click_inactive_window(hwnd, posi_1)
         time.sleep(1)
 
@@ -190,183 +440,16 @@ class Daily:
             pts = action.locate_matchTemplate2(screen, want, 0)
             if not len(pts) == 0:
                 print('确定结界突破卷数量大于20!')
-                self.pingmudianjishijian('kun28chadiao')
-                self.pingmudianjishijian('jiejietupoanniu')
-                self.pingmudianjishijian('shishenlu')
-                self.pingmudianjishijian('shishenlu_yushe')
-                self.pingmudianjishijian('shishenlu_yushe_diyuguiwang')
-                self.pingmudianjishijian('shishenlu_yushe_morenfenzu')
-                self.pingmudianjixiangduiweizhidianji('shishenlu_yushe_morenfenzu_jiejietupo', 350, 0)
-                self.pingmudianjishijian('shishenlu_yushe_quedinganniu')
-                self.pingmudianjishijian('shishenlu_fanhui')
-                # 突破9次
-                self.clickByPoi(279, 151)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(553, 151)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(826, 150)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(2)
-                self.clickByPoi(251, 268)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(553, 269)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(849, 271)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(2)
-                self.clickByPoi(258, 390)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(552, 391)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(850, 390)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
+                # time.sleep(20000)
+                size = len(mainPagePoiReductionOperations)
+                for x in range(size):
+                    chYuHunActions = action.getActionsByIndexAndOperations(x, mainPagePoiReductionOperations)
+                    doCoreOperations(self, chYuHunActions)
+                else:
+                    print("主页面位置还原流程结束")
+            else:
+                print("没有操作流程")
 
-                # 退出8次
-                self.clickByPoi(279, 151)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(553, 151)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(826, 150)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(251, 268)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(553, 269)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(849, 271)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(258, 390)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.clickByPoi(552, 391)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_tuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_querentuichuanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_shuaxinanniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_quedingshuaxinanniu')
-                time.sleep(2)
-
-                # 突破9次
-                self.clickByPoi(279, 151)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(553, 151)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(826, 150)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(2)
-                self.clickByPoi(251, 268)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(553, 269)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(849, 271)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(2)
-                self.clickByPoi(258, 390)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(552, 391)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.clickByPoi(850, 390)
-                self.pingmudianjishijian('jiejietupo_jingonganniu')
-                self.getJiangli()
-                time.sleep(2)
-                self.pingmudianjishijian('jiejietupo_suijianniu')
-                time.sleep(1)
-                self.pingmudianjishijian('jiejietupo_guanbianniu')
-                time.sleep(1)
-                self.pingmudianjishijian('kun28_hengban')
-                time.sleep(1)
                 continue
 
     def solo(self):
