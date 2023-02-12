@@ -7,6 +7,7 @@ import time
 import win32api
 import win32con
 import win32gui
+import CtrInacWindow
 
 import Featurematcah
 
@@ -109,6 +110,43 @@ def getOffsetPoi(p, poi):
     y = [e, f]
     return y
 
+# 在当前背景下面获取XX图片的位置并返回
+# 返回参数1：位置信息
+# 返回参数2：当前画面信息
+def getPosition(hwnd, imgs, target):
+    returnArray = []
+    # 每次进入新的场景会调用获取此场景的全部背景元素
+    screen = CtrInacWindow.capture_inactive_window(hwnd)
+    screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+    want = imgs[target]
+    pts = locate_matchTemplate(screen, want, 0)
+    returnArray.append(pts)
+    returnArray.append(screen)
+    return returnArray
+
+
+# 默认接受邀请
+def autoReceive(hwnd, imgs, bbox):
+    pts = getPosition(hwnd, imgs, 'mojie')[0]
+    if not len(pts) == 0:
+        posi_1 = []
+        posi_1.append(pts[0] + bbox[0])
+        posi_1.append(pts[1] + bbox[1])
+        zhunbei = cheat(posi_1, 10, 10)
+        CtrInacWindow.click_inactive_window(hwnd, zhunbei)
+        time.sleep(0.2)
+
+
+# 固定挑战阵容
+def fixTeam(hwnd, imgs, bbox):
+    pts = getPosition(hwnd, imgs, 'queding')[0]
+    if not len(pts) == 0:
+        posi_1 = []
+        posi_1.append(pts[0] + bbox[0])
+        posi_1.append(pts[1] + bbox[1])
+        zhunbei = cheat(posi_1, 10, 10)
+        CtrInacWindow.click_inactive_window(hwnd, zhunbei)
+        time.sleep(0.2)
 
 # 单纯屏幕点击事件
 def click_inactive_window(hwnd, pos):

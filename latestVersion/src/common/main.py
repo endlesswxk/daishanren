@@ -22,7 +22,9 @@ def enum_cb(hwnd, results):
 
 
 def choose_menu():
-    daily1.solo()
+    # daily1.solo()
+    daily1.yuling_solo()
+    # daily1.huntu_siji()
 
 
 if __name__ == '__main__':
