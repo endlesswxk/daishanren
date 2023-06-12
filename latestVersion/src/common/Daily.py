@@ -1,6 +1,7 @@
 import CtrInacWindow
 import cv2,time
 import Functions
+from latestVersion.src.common import Flows
 
 from latestVersion.src.common.Flows import chYuHun, mainPagePoiReduction, mainPageToTanSuo
 
@@ -163,6 +164,7 @@ class Daily:
         w = bbox[2] - bbox[0]
         h = bbox[3] - bbox[1]
         while True:  # 直到取消，或者出错
+            Flows.closeCollaborativeTask(self);
             pts = Functions.getPosition(hwnd, imgs, imageName)[0]
             screen = Functions.getPosition(hwnd, imgs, imageName)[1]
             if not len(pts) == 0:
