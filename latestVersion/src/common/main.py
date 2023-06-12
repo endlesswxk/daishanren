@@ -23,9 +23,11 @@ def enum_cb(hwnd, results):
 
 def choose_menu():
     # daily1.solo()
-    daily1.yuling_solo()
+    # daily1.yeyuahuo_solo()
+    # daily1.huodong_solo()
     # daily1.huntu_siji()
-
+    daily1.huntu_fighter()#魂土魂王都可
+    # daily1.huntu_fighter()#魂土魂王都可
 
 if __name__ == '__main__':
     win32gui.EnumWindows(enum_cb, toplist)

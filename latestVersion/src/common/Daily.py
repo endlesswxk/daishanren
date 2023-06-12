@@ -49,7 +49,7 @@ class Daily:
         w = bbox[2] - bbox[0]
         h = bbox[3] - bbox[1]
         while True:  # 直到取消，或者出错
-            self.__processInput()
+            # self.__processInput()
             screen = CtrInacWindow.capture_inactive_window(hwnd)
             screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
             want = imgs['yuhuntiaozhan']
@@ -120,7 +120,8 @@ class Daily:
         w = bbox[2] - bbox[0]
         h = bbox[3] - bbox[1]
         while True:  # 直到取消，或者出错
-            self.__processInput()
+            # self.__processInput()
+            Flows.closeCollaborativeTask(self);
             screen = CtrInacWindow.capture_inactive_window(hwnd)
             screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
             want = imgs['zhunbei']
